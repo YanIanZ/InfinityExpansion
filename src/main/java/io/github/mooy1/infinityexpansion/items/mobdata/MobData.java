@@ -75,21 +75,21 @@ public final class MobData {
     public static void setup(InfinityExpansion plugin) {
 
         new MobSimulationChamber(Groups.MOB_SIMULATION, CHAMBER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.MAGSTEEL_PLATE, Materials.MACHINE_PLATE, Materials.MAGSTEEL_PLATE,
-                Materials.MACHINE_CIRCUIT, SlimefunItems.PROGRAMMABLE_ANDROID_BUTCHER, Materials.MACHINE_CIRCUIT,
-                Materials.MAGSTEEL_PLATE, Materials.MACHINE_PLATE, Materials.MAGSTEEL_PLATE,
+                Materials.MAGSTEEL_PLATE.item(), Materials.MACHINE_PLATE.item(), Materials.MAGSTEEL_PLATE.item(),
+                Materials.MACHINE_CIRCUIT.item(), SlimefunItems.PROGRAMMABLE_ANDROID_BUTCHER.item(), Materials.MACHINE_CIRCUIT.item(),
+                Materials.MAGSTEEL_PLATE.item(), Materials.MACHINE_PLATE.item(), Materials.MAGSTEEL_PLATE.item(),
         }, CHAMBER_ENERGY, CHAMBER_INTERVAL).register(plugin);
 
         new MobDataInfuser(Groups.MOB_SIMULATION, INFUSER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.MACHINE_CIRCUIT, SlimefunItems.REINFORCED_ALLOY_INGOT, Materials.MACHINE_CIRCUIT,
-                SlimefunItems.REINFORCED_ALLOY_INGOT, Materials.MACHINE_CORE, SlimefunItems.REINFORCED_ALLOY_INGOT,
-                Materials.MACHINE_CIRCUIT, SlimefunItems.REINFORCED_ALLOY_INGOT, Materials.MACHINE_CIRCUIT
+                Materials.MACHINE_CIRCUIT.item(), SlimefunItems.REINFORCED_ALLOY_INGOT.item(), Materials.MACHINE_CIRCUIT.item(),
+                SlimefunItems.REINFORCED_ALLOY_INGOT.item(), Materials.MACHINE_CORE.item(), SlimefunItems.REINFORCED_ALLOY_INGOT.item(),
+                Materials.MACHINE_CIRCUIT.item(), SlimefunItems.REINFORCED_ALLOY_INGOT.item(), Materials.MACHINE_CIRCUIT.item()
         }, INFUSER_ENERGY).register(plugin);
 
         new SlimefunItem(Groups.MOB_SIMULATION, EMPTY_DATA_CARD, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                SlimefunItems.MAGNESIUM_INGOT, Materials.MACHINE_CIRCUIT, SlimefunItems.MAGNESIUM_INGOT,
-                SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_EMERALD,
-                SlimefunItems.MAGNESIUM_INGOT, Materials.MACHINE_CIRCUIT, SlimefunItems.MAGNESIUM_INGOT
+                SlimefunItems.MAGNESIUM_INGOT.item(), Materials.MACHINE_CIRCUIT.item(), SlimefunItems.MAGNESIUM_INGOT.item(),
+                SlimefunItems.SYNTHETIC_SAPPHIRE.item(), SlimefunItems.SYNTHETIC_DIAMOND.item(), SlimefunItems.SYNTHETIC_EMERALD.item(),
+                SlimefunItems.MAGNESIUM_INGOT.item(), Materials.MACHINE_CIRCUIT.item(), SlimefunItems.MAGNESIUM_INGOT.item()
         }).register(plugin);
 
         if (InfinityExpansion.environment() == Environment.TESTING) {
@@ -162,7 +162,7 @@ public final class MobData {
                 new ItemStack(Material.IRON_BLOCK, 64), new ItemStack(Material.PUMPKIN, 16), new ItemStack(Material.IRON_BLOCK, 64),
                 new ItemStack(Material.POPPY, 16), EMPTY_DATA_CARD, new ItemStack(Material.POPPY, 16),
                 new ItemStack(Material.IRON_BLOCK, 64), new ItemStack(Material.PUMPKIN, 16), new ItemStack(Material.IRON_BLOCK, 64)
-        }).addDrop(Material.IRON_INGOT, 2, 1).addDrop(Material.POPPY, 3).addDrop(SlimefunItems.BASIC_CIRCUIT_BOARD, 3).register(plugin);
+        }).addDrop(Material.IRON_INGOT, 2, 1).addDrop(Material.POPPY, 3).addDrop(SlimefunItems.BASIC_CIRCUIT_BOARD.item(), 3).register(plugin);
         new MobDataCard(BLAZE, MobDataTier.ADVANCED, new ItemStack[] {
                 new ItemStack(Material.MAGMA_BLOCK, 64), new ItemStack(Material.BLAZE_ROD, 64), new ItemStack(Material.MAGMA_BLOCK, 64),
                 new ItemStack(Material.BLAZE_ROD, 64), EMPTY_DATA_CARD, new ItemStack(Material.BLAZE_ROD, 64),
@@ -170,14 +170,14 @@ public final class MobData {
         }).addDrop(Material.BLAZE_ROD, 1).register(plugin);
         new MobDataCard(WITHER, MobDataTier.MINI_BOSS, new ItemStack[] {
                 new ItemStack(Material.WITHER_SKELETON_SKULL, 64), new ItemStack(Material.WITHER_SKELETON_SKULL, 64), new ItemStack(Material.WITHER_SKELETON_SKULL, 64),
-                new SlimefunItemStack(SlimefunItems.WITHER_PROOF_OBSIDIAN, 64), EMPTY_DATA_CARD, new SlimefunItemStack(SlimefunItems.WITHER_PROOF_OBSIDIAN, 64),
-                new SlimefunItemStack(Materials.VOID_INGOT, 4), new SlimefunItemStack(SlimefunItems.WITHER_ASSEMBLER, 4), new SlimefunItemStack(Materials.VOID_INGOT, 4)
-        }).addDrop(Material.NETHER_STAR, 1).addDrop(SlimefunItems.COMPRESSED_CARBON, 8, 2).register(plugin);
+                new SlimefunItemStack(SlimefunItems.WITHER_PROOF_OBSIDIAN.item(), 64), EMPTY_DATA_CARD, new SlimefunItemStack(SlimefunItems.WITHER_PROOF_OBSIDIAN.item(), 64),
+                new SlimefunItemStack(Materials.VOID_INGOT.item(), 4), new SlimefunItemStack(SlimefunItems.WITHER_ASSEMBLER.item(), 4), new SlimefunItemStack(Materials.VOID_INGOT.item(), 4)
+        }).addDrop(Material.NETHER_STAR, 1).addDrop(SlimefunItems.COMPRESSED_CARBON.item(), 8, 2).register(plugin);
         new MobDataCard(ENDER_DRAGON, MobDataTier.BOSS, new ItemStack[] {
-                new ItemStack(Material.END_CRYSTAL, 64), new SlimefunItemStack(Materials.VOID_INGOT, 32), new ItemStack(Material.CHORUS_FLOWER, 64),
-                SlimefunItems.INFUSED_ELYTRA, EMPTY_DATA_CARD, new ItemStack(Material.DRAGON_HEAD, 1),
-                new SlimefunItemStack(SlimefunItems.ENDER_LUMP_3, 64), new SlimefunItemStack(Materials.VOID_INGOT, 32), new ItemStack(Material.DRAGON_BREATH, 64)
-        }).addDrop(Materials.VOID_DUST, 1).addDrop(Materials.ENDER_ESSENCE, 4).addDrop(Material.DRAGON_EGG, 1_000_000).register(plugin);
+                new ItemStack(Material.END_CRYSTAL, 64), new SlimefunItemStack(Materials.VOID_INGOT.item(), 32), new ItemStack(Material.CHORUS_FLOWER, 64),
+                SlimefunItems.INFUSED_ELYTRA.item(), EMPTY_DATA_CARD, new ItemStack(Material.DRAGON_HEAD, 1),
+                new SlimefunItemStack(SlimefunItems.ENDER_LUMP_3.item(), 64), new SlimefunItemStack(Materials.VOID_INGOT.item(), 32), new ItemStack(Material.DRAGON_BREATH, 64)
+        }).addDrop(Materials.VOID_DUST.item(), 1).addDrop(Materials.ENDER_ESSENCE.item(), 4).addDrop(Material.DRAGON_EGG, 1_000_000).register(plugin);
         new MobDataCard(BEE, MobDataTier.NEUTRAL, new ItemStack[] {
                 new ItemStack(Material.HONEYCOMB_BLOCK, 16), new ItemStack(Material.HONEY_BLOCK, 16), new ItemStack(Material.HONEYCOMB_BLOCK, 16),
                 new ItemStack(Material.HONEY_BLOCK, 16), EMPTY_DATA_CARD, new ItemStack(Material.HONEY_BLOCK, 16),

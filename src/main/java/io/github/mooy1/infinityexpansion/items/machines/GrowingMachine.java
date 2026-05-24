@@ -19,7 +19,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
-import dev.yanianz.star.items.CustomItemStack;
+import io.github.bakedlibs.dough.items.CustomItemStack;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 
@@ -33,8 +33,8 @@ public final class GrowingMachine extends AbstractMachineBlock implements Recipe
     };
     private static final int[] INPUT_SLOTS = { 37 };
     private static final int STATUS_SLOT = 10;
-    private static final ItemStack GROWING = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aGrowing...");
-    private static final ItemStack INPUT_PLANT = new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE, "&9Input a plant!");
+    private static final ItemStack GROWING = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&aGrowing...");
+    private static final ItemStack INPUT_PLANT = CustomItemStack.create(Material.BLUE_STAINED_GLASS_PANE, "&9Input a plant!");
 
     @Setter
     private EnumMap<Material, ItemStack[]> recipes;

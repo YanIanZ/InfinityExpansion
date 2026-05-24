@@ -17,7 +17,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
-import dev.yanianz.star.items.CustomItemStack;
+import io.github.bakedlibs.dough.items.CustomItemStack;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 
@@ -149,7 +149,7 @@ public final class ResourceSynthesizer extends AbstractMachineBlock implements R
             inv.consumeItem(INPUT_SLOTS[1], 1);
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aResource Synthesized!"));
+                inv.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&aResource Synthesized!"));
             }
             return true;
 

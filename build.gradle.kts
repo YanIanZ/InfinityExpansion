@@ -38,6 +38,8 @@ dependencies {
     compileOnly("com.github.slimefun:Slimefun:4.9-UNOFFICIAL")
     implementation("io.github.mooy1:InfinityLib:f784252486")
     compileOnly("com.github.Slimefun.dough:dough-api:cb22e71335")
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
 
     testImplementation(platform("org.junit:junit-bom:5.11.4"))
     testImplementation("org.junit.jupiter:junit-jupiter")

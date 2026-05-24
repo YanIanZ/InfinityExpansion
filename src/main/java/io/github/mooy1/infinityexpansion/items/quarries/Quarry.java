@@ -19,7 +19,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
-import dev.yanianz.star.items.CustomItemStack;
+import io.github.bakedlibs.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
@@ -37,8 +37,8 @@ public final class Quarry extends AbstractMachineBlock implements RecipeDisplayI
             InfinityExpansion.config().getBoolean("quarry-options.output-nether-materials-in-overworld");
     private static final int INTERVAL =
             InfinityExpansion.config().getInt("quarry-options.ticks-per-output", 1, 100);
-    private static final ItemStack MINING = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aMining...");
-    private static final ItemStack OSCILLATOR_INFO = new CustomItemStack(
+    private static final ItemStack MINING = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&aMining...");
+    private static final ItemStack OSCILLATOR_INFO = CustomItemStack.create(
             Material.CYAN_STAINED_GLASS_PANE,
             "&bOscillator Slot",
             "&7Place a quarry oscillator to",

@@ -25,8 +25,8 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
-import dev.yanianz.star.collections.Pair;
-import dev.yanianz.star.items.CustomItemStack;
+import io.github.bakedlibs.dough.collections.Pair;
+import io.github.bakedlibs.dough.items.CustomItemStack;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
@@ -78,7 +78,7 @@ public final class SingularityConstructor extends AbstractMachineBlock implement
             Recipe triplet = RECIPE_LIST.get(progressID);
 
             if (triplet != null) {
-                ItemStack drop = new CustomItemStack(triplet.input, 64);
+                ItemStack drop = CustomItemStack.create(triplet.input, 64);
 
                 int stacks = progress / 64;
 
@@ -163,7 +163,7 @@ public final class SingularityConstructor extends AbstractMachineBlock implement
                 progressID = null;
 
                 if (menu.hasViewer()) {
-                    menu.replaceExistingItem(STATUS_SLOT, new CustomItemStack(
+                    menu.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(
                             Material.LIME_STAINED_GLASS_PANE,
                             "&aConstructing " + triplet.output.getDisplayName() + "...",
                             "&7Complete"
@@ -171,7 +171,7 @@ public final class SingularityConstructor extends AbstractMachineBlock implement
                 }
             }
             else if (menu.hasViewer()) {
-                menu.replaceExistingItem(STATUS_SLOT, new CustomItemStack(
+                menu.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(
                         Material.LIME_STAINED_GLASS_PANE,
                         "&aConstructing " + triplet.output.getDisplayName() + "...",
                         "&7" + progress + " / " + triplet.amount
@@ -229,7 +229,7 @@ public final class SingularityConstructor extends AbstractMachineBlock implement
     }
 
     private static void invalidInput(BlockMenu menu) {
-        menu.replaceExistingItem(STATUS_SLOT, new CustomItemStack(
+        menu.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(
                 Material.RED_STAINED_GLASS_PANE,
                 "&cInput a valid material to start"
         ));

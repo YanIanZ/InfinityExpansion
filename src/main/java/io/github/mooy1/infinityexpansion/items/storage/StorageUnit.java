@@ -31,9 +31,9 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.core.attributes.DistinctiveItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
-import dev.yanianz.star.collections.Pair;
-import dev.yanianz.star.items.CustomItemStack;
-import dev.yanianz.star.items.ItemUtils;
+import io.github.bakedlibs.dough.collections.Pair;
+import io.github.bakedlibs.dough.items.CustomItemStack;
+import io.github.bakedlibs.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
@@ -66,14 +66,14 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
     static final int INTERACT_SLOT = 22;
 
     /* Menu items */
-    private static final ItemStack INTERACTION_ITEM = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE,
+    private static final ItemStack INTERACTION_ITEM = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE,
             "&aQuick Actions",
             "&bLeft Click: &7Withdraw 1 item",
             "&bRight Click: &7Withdraw 1 stack",
             "&bShift Left Click: &7Deposit inventory",
             "&bShift Right Click: &7Withdraw inventory"
     );
-    private static final ItemStack LOADING_ITEM = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE,
+    private static final ItemStack LOADING_ITEM = CustomItemStack.create(Material.CYAN_STAINED_GLASS_PANE,
             "&bStatus",
             "&7Loading..."
     );

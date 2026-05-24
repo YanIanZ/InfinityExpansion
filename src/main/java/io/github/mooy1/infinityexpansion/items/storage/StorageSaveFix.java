@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 import lombok.experimental.UtilityClass;
 
-import dev.yanianz.star.common.CommonPatterns;
+import io.github.bakedlibs.dough.common.CommonPatterns;
 
 @UtilityClass
 public final class StorageSaveFix {

@@ -27,7 +27,7 @@ import io.github.mooy1.infinityexpansion.utils.Util;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import dev.yanianz.star.items.CustomItemStack;
+import io.github.bakedlibs.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
@@ -42,7 +42,7 @@ public final class AdvancedAnvil extends AbstractEnergyCrafter {
     private static final Map<Enchantment, Integer> MAX_LEVELS = Util.getEnchants(Objects.requireNonNull(
             InfinityExpansion.config().getConfigurationSection("advanced-anvil-max-levels")
     ));
-    private static final ItemStack ANVIL_SLOT = new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " ");
+    private static final ItemStack ANVIL_SLOT = CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " ");
     private static final int[] INPUT_SLOTS = {
             10, 13
     };
@@ -241,14 +241,14 @@ public final class AdvancedAnvil extends AbstractEnergyCrafter {
         ItemStack item2 = inv.getItemInSlot(INPUT_SLOTS[1]);
 
         if (item1 == null || item2 == null || (item2.getType() != Material.ENCHANTED_BOOK && item1.getType() != item2.getType())) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&cInvalid items!"));
+            inv.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(Material.BARRIER, "&cInvalid items!"));
             return;
         }
 
         ItemStack output = getOutput(item1, item2);
 
         if (output == null) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&cNo upgrades!"));
+            inv.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(Material.BARRIER, "&cNo upgrades!"));
             return;
         }
 

@@ -21,9 +21,9 @@ import org.bukkit.persistence.PersistentDataType;
 
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
 import io.github.mooy1.infinitylib.machines.MachineLore;
-import dev.yanianz.star.common.ChatColors;
-import dev.yanianz.star.items.CustomItemStack;
-import dev.yanianz.star.items.ItemUtils;
+import io.github.bakedlibs.dough.common.ChatColors;
+import io.github.bakedlibs.dough.items.CustomItemStack;
+import io.github.bakedlibs.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun4.utils.tags.SlimefunTag;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
@@ -54,7 +54,7 @@ public final class StorageCache {
     private static final String VOID_EXCESS = "void_excess"; // void excess true or null key
 
     /* Menu Items */
-    private static final ItemStack EMPTY_ITEM = new CustomItemStack(Material.BARRIER, meta -> {
+    private static final ItemStack EMPTY_ITEM = CustomItemStack.create(Material.BARRIER, meta -> {
         meta.setDisplayName(ChatColor.WHITE + "Empty");
         meta.getPersistentDataContainer().set(EMPTY_KEY, PersistentDataType.BYTE, (byte) 1);
     });
@@ -367,7 +367,7 @@ public final class StorageCache {
     }
 
     private void updateStatus() {
-        this.menu.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE, meta -> {
+        this.menu.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(Material.CYAN_STAINED_GLASS_PANE, meta -> {
             meta.setDisplayName(ChatColor.AQUA + "Status");
             List<String> lore = new ArrayList<>();
             if (this.amount == 0) {
