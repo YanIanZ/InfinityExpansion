@@ -41,6 +41,8 @@ public final class InfinityExpansion extends AbstractAddon {
 
     @Override
     protected void enable() {
+        getLogger().log(java.util.logging.Level.INFO, "Maintained by iYanZ");
+
         Metrics metrics = new Metrics(this, 8991);
         String autoUpdates = String.valueOf(autoUpdatesEnabled());
         metrics.addCustomChart(new SimplePie("auto_updates", () -> autoUpdates));

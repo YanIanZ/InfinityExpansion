@@ -13,7 +13,7 @@ import io.github.mooy1.infinityexpansion.categories.Groups;
 import io.github.mooy1.infinityexpansion.items.machines.SingularityConstructor;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import dev.yanianz.star.items.CustomItemStack;
 
 /**
  * Singularities and there recipe displays

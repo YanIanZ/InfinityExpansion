@@ -1,9 +1,12 @@
 /bin/
 /.settings/
-/target/
+/build/
+/.gradle/
 /.idea/
 *.iml
 .project
 .classpath
+/.kotlin/
+/local.properties
 dependency-reduced-pom.xml
 .DS_Store

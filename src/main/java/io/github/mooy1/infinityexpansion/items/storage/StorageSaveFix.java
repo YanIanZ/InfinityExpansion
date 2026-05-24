@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 import lombok.experimental.UtilityClass;
 
-import io.github.thebusybiscuit.slimefun4.libraries.dough.common.CommonPatterns;
+import dev.yanianz.star.common.CommonPatterns;
 
 @UtilityClass
 public final class StorageSaveFix {
