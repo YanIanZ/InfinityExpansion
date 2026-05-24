@@ -47,6 +47,8 @@ dependencies {
     testImplementation("org.mockito:mockito-core:5.14.1")
     testImplementation("org.slf4j:slf4j-simple:2.0.16")
     testImplementation("org.mockbukkit.mockbukkit:mockbukkit-v1.21:4.41.1")
+    testImplementation("com.github.slimefun:Slimefun:4.9-UNOFFICIAL")
+    testImplementation("io.papermc.paper:paper-api:26.1.2.build.+")
 }
 
 tasks.shadowJar {
