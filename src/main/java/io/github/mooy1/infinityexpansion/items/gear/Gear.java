@@ -186,7 +186,7 @@ public final class Gear {
         new InfinityBow(Groups.INFINITY_CHEAT, BOW, InfinityWorkbench.TYPE, new ItemStack[] {
                 null, Materials.INFINITE_INGOT.item(), Materials.INFINITE_INGOT.item(), Materials.VOID_INGOT.item(), null, null,
                 Materials.INFINITE_INGOT.item(), null, Materials.INFINITE_INGOT.item(), Materials.INFINITE_INGOT.item(), Materials.VOID_INGOT.item(), null,
-                Materials.VOID_INGOT.item(), null, null, ENDER_FLAME, Materials.INFINITE_INGOT.item(), Materials.VOID_INGOT.item(),
+                Materials.VOID_INGOT.item(), null, null, ENDER_FLAME.item(), Materials.INFINITE_INGOT.item(), Materials.VOID_INGOT.item(),
                 null, Materials.VOID_INGOT.item(), null, null, Materials.INFINITE_INGOT.item(), Materials.INFINITE_INGOT.item(),
                 null, null, Materials.VOID_INGOT.item(), null, null, Materials.INFINITE_INGOT.item(),
                 null, null, null, Materials.VOID_INGOT.item(), Materials.INFINITE_INGOT.item(), null

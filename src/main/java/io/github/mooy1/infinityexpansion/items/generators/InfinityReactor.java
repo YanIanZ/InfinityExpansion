@@ -202,12 +202,12 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> items = new ArrayList<>();
 
-        ItemStack item = CustomItemStack.create(Materials.INFINITE_INGOT, Materials.INFINITE_INGOT.getDisplayName(),
+        ItemStack item = CustomItemStack.create(Materials.INFINITE_INGOT.item(), Materials.INFINITE_INGOT.item().getItemMeta().getDisplayName(),
                 "", ChatColor.GOLD + "Lasts for 1 day");
         items.add(item);
         items.add(null);
 
-        item = CustomItemStack.create(Materials.VOID_INGOT, Materials.VOID_INGOT.getDisplayName(),
+        item = CustomItemStack.create(Materials.VOID_INGOT.item(), Materials.VOID_INGOT.item().getItemMeta().getDisplayName(),
                 ChatColor.GOLD + "Lasts for 4 hours");
         items.add(item);
         items.add(null);
